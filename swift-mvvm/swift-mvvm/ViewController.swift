@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, NetworkManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var locationLabel: UILabel!
     
     let coordinateString: String = "38.914504,-77.021181"
     var weatherDataArray = [WeatherData]()
@@ -20,6 +21,8 @@ class ViewController: UIViewController, NetworkManagerDelegate, UITableViewDeleg
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        locationLabel.text = "Weather for \(coordinateString)"
         
         guard let path = Bundle.main.path(forResource: "keys", ofType: "plist"),
             let keys = NSDictionary(contentsOfFile: path),
@@ -54,7 +57,12 @@ class ViewController: UIViewController, NetworkManagerDelegate, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let weatherData = weatherDataArray[indexPath.row]
         let weatherViewModel = WeatherViewModel(weatherData)
-        
         return weatherViewModel.cellInstance(tableView, indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let weatherData = weatherDataArray[indexPath.row]
+        let weatherViewModel = WeatherViewModel(weatherData)
+        weatherViewModel.tapCell(tableView, indexPath: indexPath)
     }
 }

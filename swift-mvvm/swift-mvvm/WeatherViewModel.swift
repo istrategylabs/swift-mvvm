@@ -13,8 +13,8 @@ class WeatherViewModel {
     var weatherData: WeatherData
     
     var rawUnixTime: Double?
-    var minTemp: Double?
-    var maxTemp: Double?
+    var minTemp: Int?
+    var maxTemp: Int?
     var summary: String?
     var dateString: String = ""
     
@@ -24,8 +24,8 @@ class WeatherViewModel {
         self.weatherData = weatherData
         
         rawUnixTime = weatherData.rawUnixTime
-        minTemp = weatherData.minTemp
-        maxTemp = weatherData.maxTemp
+        minTemp = Int(weatherData.minTemp.rounded())
+        maxTemp = Int(weatherData.maxTemp.rounded())
         summary = weatherData.summary
         
         guard let unixTime = rawUnixTime else {

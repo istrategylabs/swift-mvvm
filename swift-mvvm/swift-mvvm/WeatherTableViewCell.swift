@@ -31,6 +31,6 @@ class WeatherTableViewCell: UITableViewCell {
         dateLabel.text = viewModel.dateString
         minTempLabel.text = String(minTemp)
         maxTempLabel.text = String(maxTemp)
-        summaryLabel.text = String(summary)
+        summaryLabel.text = summary
     }
 }
