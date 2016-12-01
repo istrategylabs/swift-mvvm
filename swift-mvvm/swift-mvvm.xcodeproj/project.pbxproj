@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C4D24F7751D0FF33C783FD0E /* Pods_swift_mvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401B9721B4D366D89D25D072 /* Pods_swift_mvvm.framework */; };
+		E82265671DEF99E500877497 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82265661DEF99E500877497 /* NetworkManager.swift */; };
+		E82265691DEF9FCE00877497 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82265681DEF9FCE00877497 /* Utilities.swift */; };
+		E822656D1DEFA05800877497 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822656C1DEFA05800877497 /* WeatherData.swift */; };
+		E822656F1DEFA05F00877497 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E822656E1DEFA05F00877497 /* WeatherViewModel.swift */; };
+		E82265711DEFA06700877497 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82265701DEFA06700877497 /* WeatherTableViewCell.swift */; };
 		E8F4E16F1DEE4C510025B1CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4E16E1DEE4C510025B1CD /* AppDelegate.swift */; };
 		E8F4E1711DEE4C510025B1CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4E1701DEE4C510025B1CD /* ViewController.swift */; };
 		E8F4E1741DEE4C510025B1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F4E1721DEE4C510025B1CD /* Main.storyboard */; };
 		E8F4E1761DEE4C510025B1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F4E1751DEE4C510025B1CD /* Assets.xcassets */; };
 		E8F4E1791DEE4C510025B1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F4E1771DEE4C510025B1CD /* LaunchScreen.storyboard */; };
+		E8F4E1811DEE526D0025B1CD /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8F4E1801DEE526D0025B1CD /* keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		401B9721B4D366D89D25D072 /* Pods_swift_mvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_mvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E9BEB9FC48B542360C4821 /* Pods-swift-mvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-mvvm.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-mvvm/Pods-swift-mvvm.release.xcconfig"; sourceTree = "<group>"; };
 		AA5D8DE1127234484EA1F477 /* Pods-swift-mvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-mvvm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-mvvm/Pods-swift-mvvm.debug.xcconfig"; sourceTree = "<group>"; };
+		E82265661DEF99E500877497 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E82265681DEF9FCE00877497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E822656C1DEFA05800877497 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		E822656E1DEFA05F00877497 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		E82265701DEFA06700877497 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		E8F4E16B1DEE4C510025B1CD /* swift-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F4E16E1DEE4C510025B1CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8F4E1701DEE4C510025B1CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +37,7 @@
 		E8F4E1751DEE4C510025B1CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8F4E1781DEE4C510025B1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8F4E17A1DEE4C510025B1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8F4E1801DEE526D0025B1CD /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +92,16 @@
 			children = (
 				E8F4E16E1DEE4C510025B1CD /* AppDelegate.swift */,
 				E8F4E1701DEE4C510025B1CD /* ViewController.swift */,
+				E82265661DEF99E500877497 /* NetworkManager.swift */,
+				E82265681DEF9FCE00877497 /* Utilities.swift */,
+				E822656C1DEFA05800877497 /* WeatherData.swift */,
+				E822656E1DEFA05F00877497 /* WeatherViewModel.swift */,
+				E82265701DEFA06700877497 /* WeatherTableViewCell.swift */,
 				E8F4E1721DEE4C510025B1CD /* Main.storyboard */,
 				E8F4E1751DEE4C510025B1CD /* Assets.xcassets */,
 				E8F4E1771DEE4C510025B1CD /* LaunchScreen.storyboard */,
 				E8F4E17A1DEE4C510025B1CD /* Info.plist */,
+				E8F4E1801DEE526D0025B1CD /* keys.plist */,
 			);
 			path = "swift-mvvm";
 			sourceTree = "<group>";
@@ -151,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F4E1811DEE526D0025B1CD /* keys.plist in Resources */,
 				E8F4E1791DEE4C510025B1CD /* LaunchScreen.storyboard in Resources */,
 				E8F4E1761DEE4C510025B1CD /* Assets.xcassets in Resources */,
 				E8F4E1741DEE4C510025B1CD /* Main.storyboard in Resources */,
@@ -212,7 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82265671DEF99E500877497 /* NetworkManager.swift in Sources */,
+				E822656F1DEFA05F00877497 /* WeatherViewModel.swift in Sources */,
+				E82265711DEFA06700877497 /* WeatherTableViewCell.swift in Sources */,
+				E822656D1DEFA05800877497 /* WeatherData.swift in Sources */,
 				E8F4E1711DEE4C510025B1CD /* ViewController.swift in Sources */,
+				E82265691DEF9FCE00877497 /* Utilities.swift in Sources */,
 				E8F4E16F1DEE4C510025B1CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +281,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,6 +331,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -334,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA5D8DE1127234484EA1F477 /* Pods-swift-mvvm.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z3QGFL558K;
 				INFOPLIST_FILE = "swift-mvvm/Info.plist";
@@ -348,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7E9BEB9FC48B542360C4821 /* Pods-swift-mvvm.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z3QGFL558K;
 				INFOPLIST_FILE = "swift-mvvm/Info.plist";
@@ -377,6 +405,7 @@
 				E8F4E17F1DEE4C510025B1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
