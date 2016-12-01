@@ -9,14 +9,17 @@
 import UIKit
 import SwiftyJSON
 
-class ViewController: UIViewController, NetworkManagerDelegate {
+class ViewController: UIViewController, NetworkManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     let coordinateString: String = "38.914504,-77.021181"
+    var weatherDataArray = [WeatherData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
         
         guard let path = Bundle.main.path(forResource: "keys", ofType: "plist"),
             let keys = NSDictionary(contentsOfFile: path),
@@ -40,9 +43,18 @@ class ViewController: UIViewController, NetworkManagerDelegate {
             return
         }
         let json = JSON(data)
-        
-        
+        weatherDataArray = Utilities.loadWeatherFromJSON(json: json)
+        tableView.reloadData()
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return weatherDataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let weatherData = weatherDataArray[indexPath.row]
+        let weatherViewModel = WeatherViewModel(weatherData)
+        
+        return weatherViewModel.cellInstance(tableView, indexPath: indexPath)
+    }
 }

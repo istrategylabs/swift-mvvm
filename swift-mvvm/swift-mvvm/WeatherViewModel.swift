@@ -7,3 +7,46 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+class WeatherViewModel {
+    var weatherData: WeatherData
+    
+    var rawUnixTime: Double?
+    var minTemp: Double?
+    var maxTemp: Double?
+    var summary: String?
+    var dateString: String = ""
+    
+    let reuseIdentifier = "WeatherCell"
+    
+    init(_ weatherData: WeatherData) {
+        self.weatherData = weatherData
+        
+        rawUnixTime = weatherData.rawUnixTime
+        minTemp = weatherData.minTemp
+        maxTemp = weatherData.maxTemp
+        summary = weatherData.summary
+        
+        guard let unixTime = rawUnixTime else {
+            print("Invalid unix time")
+            return
+        }
+        
+        let date = Date(timeIntervalSince1970: unixTime)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateString = dateFormatter.string(from: date)
+    }
+    
+    func cellInstance(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! WeatherTableViewCell
+        cell.setup(self)
+        
+        return cell
+    }
+    
+    func tapCell(_ tableView: UITableView, indexPath: IndexPath) {
+        print("Tapped a cell")
+    }
+}
