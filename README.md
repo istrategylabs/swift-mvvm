@@ -2,7 +2,7 @@
 A Swift Example of ISL's MVVM Technique
 
 
-### Installation
+### 💰 Installation
 
 1. Create an account or grab a new API key from [Dark Sky API](https://darksky.net/dev/)
 2. Make sure CocoaPods is installed and up to date. Run `pod install` in the project directory.
@@ -11,14 +11,14 @@ A Swift Example of ISL's MVVM Technique
 5. Build and run!
 
 
-### Dependecies
+### ⛽️ Dependecies
 
 To minimize code and highlight the MVVM structure, two dependencies were used to make network calls easier.
 
 * Alamofire
 * SwiftyJSON
 
-### Project Overview
+### 📱 Project Overview
 
 * `NetworkManager.swift` - Handles the GET Request to Dark Sky's API.
 * `WeatherData.swift` - Data model with the information we want to show in the app.
